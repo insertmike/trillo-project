@@ -72,6 +72,7 @@
 .user-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     align-self: stretch;
     font-size: inherit;
     & > * {
@@ -86,11 +87,11 @@
         background-color: var(--color-grey-light-2);
         
     }
-
+  
     &__icon-box {
         position: relative;
     }
-
+    
     &__icon {
         height: 2.25rem;
         width: 2.25rem;
@@ -98,6 +99,7 @@
     }
 
     &__notification {
+        
         font-size: .8rem;
         height: 1.75rem;
         width: 1.75rem;
@@ -122,8 +124,82 @@
     &__user-name {
 
     }
-    
+
+    &__popup {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    color: var(--color-grey-dark-2);
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,0.3);
+    border-radius: 4px;
+    overflow-y: scroll;
+    z-index: 999;
+    transition: all .2s;
+    min-width: 30rem;
+    max-height: 30rem;
+    padding-bottom: 1rem;
+    &--heading {
+        font-size: 1.6rem;
+        margin-top: .4rem;
+    }
+    &--notification {
+        font-size: 1.6rem;
+        margin-top: .4rem;
+        display: flex;
+        width: 90%;
+        padding: 1rem;
+        
+        &:not(:last-child){
+            border-bottom: var(--line);
+        }
+        & .review__user-box {
+            margin-left: .5rem;
+        }
+        & .review__user-name {
+            font-size: 75%;
+        
+        }
+        & .review__user-comment {
+            font-size: 60%;
+        }
+        &--timestamp {
+           display: flex;
+           flex-direction: column;
+           margin-left: auto;
+           align-items: flex-end; 
+           flex: 1;
+           
+        }
+        &-time{
+            font-size: 1rem;
+        }
+        &-date{
+            font-size: 1rem;
+        }
+    }
+    }
+    &__icon-box-bookmark {
+        &:hover .user-nav__popup-bookmark{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__icon-box-messages {
+        &:hover .user-nav__popup-messages{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 }
+
 
 //////////////////////////////////
 // Side navigation

@@ -186,6 +186,7 @@ body {
 .user-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   align-self: stretch;
   font-size: inherit; }
   .user-nav > * {
@@ -219,6 +220,60 @@ body {
     height: 5rem;
     border-radius: 50%;
     margin-right: 1rem; }
+  .user-nav__popup {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    color: var(--color-grey-dark-2);
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow-y: scroll;
+    z-index: 999;
+    transition: all .2s;
+    min-width: 30rem;
+    max-height: 30rem;
+    padding-bottom: 1rem; }
+    .user-nav__popup--heading {
+      font-size: 1.6rem;
+      margin-top: .4rem; }
+    .user-nav__popup--notification {
+      font-size: 1.6rem;
+      margin-top: .4rem;
+      display: flex;
+      width: 90%;
+      padding: 1rem; }
+      .user-nav__popup--notification:not(:last-child) {
+        border-bottom: var(--line); }
+      .user-nav__popup--notification .review__user-box {
+        margin-left: .5rem; }
+      .user-nav__popup--notification .review__user-name {
+        font-size: 75%; }
+      .user-nav__popup--notification .review__user-comment {
+        font-size: 60%; }
+      .user-nav__popup--notification--timestamp {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        align-items: flex-end;
+        flex: 1; }
+      .user-nav__popup--notification-time {
+        font-size: 1rem; }
+      .user-nav__popup--notification-date {
+        font-size: 1rem; }
+  .user-nav__icon-box-bookmark:hover .user-nav__popup-bookmark {
+    opacity: 1;
+    visibility: visible; }
+  .user-nav__icon-box-messages:hover .user-nav__popup-messages {
+    opacity: 1;
+    visibility: visible; }
 
 .side-nav {
   font-size: 1.4rem;
