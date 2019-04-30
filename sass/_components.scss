@@ -41,6 +41,7 @@
 
         &::-webkit-input-placeholder {
             font-weight: 100;
+            color: var(--color-grey-dark-3);
         }
     }
 
@@ -85,9 +86,8 @@
 
     & > *:hover {
         background-color: var(--color-grey-light-2);
-        
     }
-  
+   
     &__icon-box {
         position: relative;
     }
@@ -97,7 +97,8 @@
         width: 2.25rem;
         fill: var(--color-grey-dark-2);
     }
-
+   
+    
     &__notification {
         
         font-size: .8rem;
@@ -112,9 +113,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        transition: all .1s;
     }
-
+    &__icon-box:hover &__notification{
+        transform: scale(1.1);
+    } 
     &__user-photo {
         height: 5rem;
         border-radius: 50%;
@@ -396,6 +399,7 @@
     display: flex;
     &__photo {
         width: 100%;
+        max-height: 18rem;
         display: block;
     }
 
