@@ -1,0 +1,197 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+}
+
+.search {
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        border-radius: 100px;
+
+        @media only screen and (max-width: $bp-smallest) {
+            border-radius: 1rem;
+        }
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-dark-3);
+        }
+    }
+
+    &__input:focus+&__button {
+        background-color: var(--color-grey-light-3);
+    }
+}
+
+.user-nav {
+    &__notification {
+
+        font-size: .8rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+
+    &__popup {
+        color: var(--color-grey-dark-2);
+        background-color: #fff;
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+
+        &--heading {
+            font-size: 1.6rem;
+        }
+
+        &--notification {
+            font-size: 1.6rem;
+
+            & .review__user-name {
+                font-size: 75%;
+                font-weight: 400;
+            }
+
+            & .review__user-comment {
+                font-size: 60%;
+            }
+
+            &-time {
+                font-size: 1rem;
+            }
+
+            &-date {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__user {
+        &-menu {
+            &--item {}
+
+            &-icon {
+                line-height: 0;
+            }
+
+            &-option {
+                font-size: 1.5rem;
+                line-height: 0;
+
+            }
+        }
+    }
+
+}
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+
+}
+
+.legal {
+    font-size: 1.2rem;
+}
+
+.overview {
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__location {
+        font-size: 1.2rem;
+    }
+
+    &__rating-average {
+        font-size: 2.25rem;
+        font-weight: 300;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__rating-count {
+        font-size: .8rem;
+    }
+}
+
+.btn-inline {
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+
+}
+
+.recommend {
+    font-size: 1.3rem;
+
+}
+
+.review {
+
+    &__user-name {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__rating {
+        color: var(--color-primary);
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    &::before {
+        font-size: 20rem;
+        line-height: 1;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+    }
+}
+
+.cta {
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+
+    }
+}
+
+//////////////////////////////////
+// Button CTA  
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+}
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}

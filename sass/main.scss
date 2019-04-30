@@ -1,3 +1,23 @@
-@import "base";
-@import "layout";
-@import "components";
+@import "abstract/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+@import "components/logo";
+@import "components/search-box";
+@import "components/user-nav";
+@import "components/side-nav";
+@import "components/gallery";
+@import "components/hotel-overview";
+@import "components/button";
+@import "components/list";
+@import "components/recommend";
+@import "components/review";
+@import "components/cta";
+
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/content";
+
+@import "pages/home";
