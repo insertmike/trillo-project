@@ -43,7 +43,7 @@
     }
    
     &__suggestions {
-        
+        z-index: 999;
         transition: all .2s;
         opacity: 0;
         visibility: hidden;
@@ -53,18 +53,21 @@
         width: 95%;
         height: 30rem;
         overflow-y: scroll;
+        overflow-x: scroll;
         background-color: #fff;
         // Fix with search bar
-        left: 2rem;
+        
         padding: 1rem;
+        left: 51%;
+        transform: translate(-50%, 0);
         
         border: .2px solid rgba(0,0,0,.2);
         border-top: none;
         box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
-        @media only screen and (max-width: $bp-medium) {
-            width: 90%;
-            left: 2rem;
-        }
+        @media only screen and (max-width: $bp-smallest) {
+            width: 80%;
+            
+         }
     }
     
    
@@ -78,6 +81,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    min-width: 24rem;
+    
     &:not(:last-child){
         border-bottom: var(--line);
         margin-bottom: 1rem;
@@ -116,7 +121,7 @@
         // align-items: center;
         
         &--stars{
-            
+           line-height: 0;
         }
         & .overview__rating{
             font-size: 50%;
@@ -144,8 +149,16 @@
         }
     }
     @media only screen and (max-width: $bp-medium) {
-       height: 8.5rem;
+        height: 8rem;
+     }
+    @media only screen and (max-width: $bp-small) {
+       height: 10rem;
     }
+    @media only screen and (max-width: $bp-smallest) {
+        height: 6.5rem;
+        
+     }
+    
 }
 .search__input:focus ~ .suggestions {
     opacity:0;
