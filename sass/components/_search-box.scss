@@ -1,20 +1,10 @@
 .search {
-    flex: 0 0 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     
-    @media only screen and (max-width: $bp-smallest) {
-        order: 1;
-        flex: 0 0 100%;
-    }
-
     &__input {
-        padding: .7rem 2rem;
         width: 90%;
-        transition: all .2s;
         margin-right: -3.25rem;
+        padding: .7rem 2rem;
+        transition: all .2s;
         
        &:focus ~ .search__suggestions{
            visibility: visible;
@@ -43,124 +33,36 @@
     }
    
     &__suggestions {
-        z-index: 999;
-        transition: all .2s;
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        top: 100%;
-        // Testing 
+        
         width: 95%;
         height: 30rem;
-        overflow-y: scroll;
-        overflow-x: scroll;
-        background-color: #fff;
-        // Fix with search bar
-        
-        padding: 1rem;
-        left: 51%;
-        transform: translate(-50%, 0);
         
         border: .2px solid rgba(0,0,0,.2);
         border-top: none;
         box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+       
+
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        
+        z-index: 999;
+        overflow-y: scroll;
+        transition: all .2s;
+
+        // Positioning in the center of the search bar
+        padding: 1rem;
+        left: 51%;
+        transform: translate(-50%, 0);
+        
+        
+        
         @media only screen and (max-width: $bp-smallest) {
             width: 80%;
-            
          }
     }
     
    
 }
-
-.suggestion {
-    display: flex;
-    width: 100%;
-    // height: 100%;
-    height: 6.5rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    min-width: 24rem;
-    
-    &:not(:last-child){
-        border-bottom: var(--line);
-        margin-bottom: 1rem;
-    }
-  
-    &__imageBox{
-        &--img{
-            width: 6rem;
-            height: 6rem;
-            border-radius: 50%;
-            margin-right: 1rem;
-        }
-    }
-    &__info {   
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        padding: .5rem;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex: 1;
-        &--title{
-            padding-bottom: .4rem;
-        }
-        &--location{
-            display: flex;
-            height: 100%;
-            font-size: 80%;
-        }
-    }
-    &__rating {
-        display: flex;
-        flex-direction: column;
-        width: 10.5rem;
-        
-        // align-items: center;
-        
-        &--stars{
-           line-height: 0;
-        }
-        & .overview__rating{
-            font-size: 50%;
-            // margin-right: 50%;
-            align-self: center;
-            flex-direction: row;
-            width: 100%;
-            padding: .2rem .5rem;
-            
-            justify-content: space-between;
-            // align-items: space-around !important;
-            margin-left: 0;
-            &-average{
-                width: 50%;
-                text-align: center;
-                border-right: var(--line);
-                font-size: 2rem;
-            }
-            &-count {
-                margin-left: 5px;
-                text-align: center;
-                width: 50%;
-                font-size: .8rem;
-            }
-        }
-    }
-    @media only screen and (max-width: $bp-medium) {
-        height: 8rem;
-     }
-    @media only screen and (max-width: $bp-small) {
-       height: 10rem;
-    }
-    @media only screen and (max-width: $bp-smallest) {
-        height: 6.5rem;
-        
-     }
-    
-}
-.search__input:focus ~ .suggestions {
-    opacity:0;
-    visibility: hidden;
-   }
