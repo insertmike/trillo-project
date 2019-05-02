@@ -703,6 +703,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .cta {
       padding: 2.5rem 0; } }
+  @media only screen and (max-width: 31.25em) {
+    .cta {
+      padding: 2.5rem 1.5rem; } }
   .cta__book-now {
     margin-bottom: 2.5rem; }
 
