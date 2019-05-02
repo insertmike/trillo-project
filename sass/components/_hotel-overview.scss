@@ -3,7 +3,8 @@
     align-items: center;
 
     border-bottom: var(--line);
-
+    overflow: auto;
+    
     &__heading {
 
         padding: 1.5rem 3rem;
@@ -43,12 +44,7 @@
     }
 
     &__icon-location {
-        margin-right: .5rem;
-
-        @media only screen and (max-width: $bp-smallest) {
-            margin-right: -.8rem;
-
-        }
+        margin-right: .3rem;
     }
 
     &__rating {
@@ -68,15 +64,12 @@
         }
 
         @media only screen and (max-width: $bp-smallest) {
-            // padding: 0 2.5rem;
-            // width: 26%;
-
             display: flex;
             align-items: center;
             justify-content: center;
 
             flex-direction: row;
-
+            margin-left: auto;
             &-average {
 
                 border-right: var(--line);

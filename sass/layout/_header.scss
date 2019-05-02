@@ -13,18 +13,20 @@
         align-content: space-around;
         height: 11rem;
     }
+
     .search {
         flex: 0 0 40%;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        
+
         @media only screen and (max-width: $bp-smallest) {
             order: 1;
             flex: 0 0 100%;
         }
     }
+
     .user-nav {
         display: flex;
         align-items: center;
